@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
+
 @app.route('/') # a decorator provided by flask to assign url in our app to functions easily
 def hello_world():
     return 'Hello, World!'
@@ -23,6 +24,7 @@ def square(n):
               "Giving output" : True
     }
     return jsonify(result) #converts the object into proper json structure
+
 
 @app.route('/testget', methods=['GET'])
 def testgetapi():
